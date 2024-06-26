@@ -30,6 +30,12 @@ struct Args {
     cairo_pies: Vec<PathBuf>,
     #[clap(long = "use_poseidon", num_args = 1.., value_delimiter = ',')]
     use_poseidon: Vec<bool>,
+    #[clap(
+        long = "fact_topologies_path",
+        help = "Path to the fact topologies output file.",
+        required = true
+    )]
+    fact_topologies_path: PathBuf,
     #[clap(long = "layout", default_value = "plain", value_enum)]
     layout: LayoutName,
 }
@@ -69,6 +75,7 @@ impl FileWriter {
 fn cairo_run_simple_bootloader_in_proof_mode(
     simple_bootloader_program: &Program,
     tasks: Vec<TaskSpec>,
+    fact_topologies_path: PathBuf,
     layout: LayoutName,
 ) -> Result<CairoRunner, CairoRunError> {
     let mut hint_processor = BootloaderHintProcessor::new();
@@ -86,7 +93,7 @@ fn cairo_run_simple_bootloader_in_proof_mode(
 
     // Build the bootloader input
     let simple_bootloader_input = SimpleBootloaderInput {
-        fact_topologies_path: None,
+        fact_topologies_path: Some(fact_topologies_path),
         single_page: true,
         tasks,
     };
@@ -127,8 +134,12 @@ fn main() -> Result<(), Box<dyn Error>> {
         args.use_poseidon,
     )?;
 
-    let runner =
-        cairo_run_simple_bootloader_in_proof_mode(&simple_bootloader_program, tasks, args.layout)?;
+    let runner = cairo_run_simple_bootloader_in_proof_mode(
+        &simple_bootloader_program,
+        tasks,
+        args.fact_topologies_path,
+        args.layout,
+    )?;
 
     std::fs::write(
         args.air_public_input,
