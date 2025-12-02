@@ -11,10 +11,10 @@ resolver = "2"
 anyhow = "1.0.98"
 bincode = { version = "2.0.1", features = ["serde"] }
 cairo-air = { git = "https://github.com/starkware-libs/stwo-cairo", rev = "6b45dd698a31d76c43f1e400cdb7ed8c23f97157" }
-cairo-lang-executable = "=2.14.1-dev.0"
-cairo-lang-runner = "=2.14.1-dev.0"
-cairo-lang-casm = "=2.14.1-dev.0"
-cairo-lang-execute-utils = "=2.14.1-dev.0"
+cairo-lang-executable = { git = "https://github.com/starkware-libs/cairo", rev = "eb9f7309af3bd815aca96187af06b4a2f662a089" }
+cairo-lang-runner = { git = "https://github.com/starkware-libs/cairo", rev = "eb9f7309af3bd815aca96187af06b4a2f662a089" }
+cairo-lang-casm = { git = "https://github.com/starkware-libs/cairo", rev = "eb9f7309af3bd815aca96187af06b4a2f662a089" }
+cairo-lang-execute-utils = { git = "https://github.com/starkware-libs/cairo", rev = "eb9f7309af3bd815aca96187af06b4a2f662a089" }
 cairo-program-runner-lib = { path = "crates/cairo-program-runner-lib" }
 cairo-vm = { version = "=3.0.0", features = [
     "extensive_hints",
