@@ -22,7 +22,7 @@ cairo-lang-runner = "=2.14.1-dev.0"
 cairo-lang-casm = "=2.14.1-dev.0"
 cairo-lang-execute-utils = "=2.14.1-dev.0"
 cairo-program-runner-lib = { path = "crates/cairo-program-runner-lib", version = "1.0.0" }
-cairo-vm = { version = "=3.0.0", features = [
+cairo-vm = { version = "=3.1.0", features = [
     "extensive_hints",
     "mod_builtin",
     "clap",
