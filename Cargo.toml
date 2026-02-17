@@ -16,11 +16,11 @@ repository = "https://github.com/starkware-libs/proving-utils"
 [workspace.dependencies]
 anyhow = "1.0.98"
 bincode = { version = "2.0.1", features = ["serde"] }
-cairo-air = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "b30407140c6f2b656045a866973f6df2e7242e03" }
-cairo-lang-executable = "=2.16.0-rc.0"
-cairo-lang-runner = "=2.16.0-rc.0"
-cairo-lang-casm = "=2.16.0-rc.0"
-cairo-lang-execute-utils = "=2.16.0-rc.0"
+cairo-air = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "9175316232653d8825e51d2149fd33794f7579b7" }
+cairo-lang-executable = "*"
+cairo-lang-runner = "*"
+cairo-lang-casm = "*"
+cairo-lang-execute-utils = "*"
 cairo-program-runner-lib = { path = "crates/cairo-program-runner-lib", version = "1.0.0" }
 cairo-vm = { version = "=3.1.0", features = [
     "extensive_hints",
@@ -40,10 +40,10 @@ sonic-rs = "0.3.17"
 starknet-crypto = "=0.8.1"
 starknet-ff = "0.3.7"
 starknet-types-core = "=0.2.4"
-stwo-cairo-utils = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "b30407140c6f2b656045a866973f6df2e7242e03" }
-stwo-cairo-adapter = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "b30407140c6f2b656045a866973f6df2e7242e03" }
-stwo-cairo-prover = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "b30407140c6f2b656045a866973f6df2e7242e03" }
-stwo-cairo-serialize = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "b30407140c6f2b656045a866973f6df2e7242e03" }
+stwo-cairo-utils = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "9175316232653d8825e51d2149fd33794f7579b7" }
+stwo-cairo-adapter = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "9175316232653d8825e51d2149fd33794f7579b7" }
+stwo-cairo-prover = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "9175316232653d8825e51d2149fd33794f7579b7" }
+stwo-cairo-serialize = { git = "https://github.com/software-mansion-labs/stwo-cairo/", rev = "9175316232653d8825e51d2149fd33794f7579b7" }
 tempfile = "3.10.1"
 thiserror = "1.0.61"
 thiserror-no-std = "2.0.2"
