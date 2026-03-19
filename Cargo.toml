@@ -51,10 +51,10 @@ cairo-vm = { version = "=3.2.0", features = [
 ] }
 
 # cairo-lang
-cairo-lang-executable = "2.16.0"
-cairo-lang-runner = "2.16.0"
-cairo-lang-casm = "2.16.0"
-cairo-lang-execute-utils = "2.16.0"
+cairo-lang-executable = { git = "https://github.com/starkware-libs/cairo", rev = "54a18009aba9f093785015704dbbe77aef41b0e5" }
+cairo-lang-runner = { git = "https://github.com/starkware-libs/cairo", rev = "54a18009aba9f093785015704dbbe77aef41b0e5" }
+cairo-lang-casm = { git = "https://github.com/starkware-libs/cairo", rev = "54a18009aba9f093785015704dbbe77aef41b0e5" }
+cairo-lang-execute-utils = { git = "https://github.com/starkware-libs/cairo", rev = "54a18009aba9f093785015704dbbe77aef41b0e5" }
 
 # stwo cairo
 cairo-air = { git = "https://github.com/starkware-libs/stwo-cairo", rev = "467d5c6d" }
