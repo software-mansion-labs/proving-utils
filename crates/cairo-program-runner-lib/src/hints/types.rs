@@ -1,4 +1,6 @@
 use std::collections::HashMap;
+
+use cairo_lang_utils::unordered_hash_map::UnorderedHashMap;
 use std::path::PathBuf;
 use std::rc::Rc;
 use std::str::FromStr;
@@ -226,7 +228,7 @@ pub struct Cairo0Executable {
 pub struct Cairo1Executable {
     pub program: Program,
     pub user_args: Vec<Arg>,
-    pub string_to_hint: HashMap<String, Hint>,
+    pub string_to_hint: UnorderedHashMap<String, Hint>,
 }
 
 impl PartialEq for Cairo1Executable {
