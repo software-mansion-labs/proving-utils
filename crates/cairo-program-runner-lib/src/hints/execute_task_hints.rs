@@ -470,7 +470,7 @@ pub fn setup_subtask_for_execution(
             subtask_cairo1_hint_processor = Some(CairoHintProcessor {
                 runner: None,
                 user_args: vec![vec![Arg::Array(cairo1_executable.user_args.clone())]],
-                string_to_hint: cairo1_executable.string_to_hint.clone(),
+                string_to_hint: FromIterator::from_iter(cairo1_executable.string_to_hint.clone()),
                 starknet_state: Default::default(),
                 run_resources: Default::default(),
                 syscalls_used_resources: Default::default(),
