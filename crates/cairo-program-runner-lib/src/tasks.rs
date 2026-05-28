@@ -94,6 +94,6 @@ pub fn create_cairo1_program_task(
     Ok(Task::Cairo1Program(Cairo1Executable {
         program,
         user_args,
-        string_to_hint,
+        string_to_hint: string_to_hint.into_iter_sorted().collect(),
     }))
 }
