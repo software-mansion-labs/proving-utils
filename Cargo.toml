@@ -51,11 +51,11 @@ cairo-vm = { version = "=3.2.0", features = [
 ] }
 
 # cairo-lang
-cairo-lang-executable = "2.19.0-rc.0"
-cairo-lang-runner = "2.19.0-rc.0"
-cairo-lang-casm = "2.19.0-rc.0"
-cairo-lang-execute-utils = "2.19.0-rc.0"
-cairo-lang-utils = "2.19.0-rc.0"
+cairo-lang-executable = "2.19.0-rc.3"
+cairo-lang-runner = "2.19.0-rc.3"
+cairo-lang-casm = "2.19.0-rc.3"
+cairo-lang-execute-utils = "2.19.0-rc.3"
+cairo-lang-utils = "2.19.0-rc.3"
 
 # stwo cairo
 cairo-air = "1.2.2"
@@ -75,6 +75,22 @@ privacy-circuit-verify = { path = "crates/privacy_circuit_verify", version = "1.
 # while maintaining a reasonable compile time.
 # In the cases where it's not enough, try to manually increase the stack size,
 # See cairo-ci.yaml for an example command.
+[patch.crates-io]
+stwo = { git = "https://github.com/software-mansion-labs/stwo", rev = "c2dff9221cdb101f73923d2e3a8c687e078419af" }
+stwo-air-utils = { git = "https://github.com/software-mansion-labs/stwo", rev = "c2dff9221cdb101f73923d2e3a8c687e078419af" }
+cairo-air = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-adapter = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-prover = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-serialize = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-common = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+
+[patch."https://github.com/starkware-libs/stwo-cairo"]
+cairo-air = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-adapter = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-prover = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-serialize = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+stwo-cairo-common = { git = "https://github.com/software-mansion-labs/stwo-cairo", rev = "42ff979676444a1668c23799644c38f9ec7933e9" }
+
 [profile.witness-opt-1]
 inherits = "dev"
 package = { "stwo-cairo-prover" = { opt-level = 1 }, "stwo" = { opt-level = 1 }, "circuit-prover" = { opt-level = 1 }, "privacy-prove" = { opt-level = 1 } }
