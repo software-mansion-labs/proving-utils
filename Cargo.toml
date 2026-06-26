@@ -51,11 +51,11 @@ cairo-vm = { version = "=3.2.0", features = [
 ] }
 
 # cairo-lang
-cairo-lang-executable = "2.19.0-rc.3"
-cairo-lang-runner = "2.19.0-rc.3"
-cairo-lang-casm = "2.19.0-rc.3"
-cairo-lang-execute-utils = "2.19.0-rc.3"
-cairo-lang-utils = "2.19.0-rc.3"
+cairo-lang-executable = "2.19.0"
+cairo-lang-runner = "2.19.0"
+cairo-lang-casm = "2.19.0"
+cairo-lang-execute-utils = "2.19.0"
+cairo-lang-utils = "2.19.0"
 
 # stwo cairo
 cairo-air = "1.2.2"
